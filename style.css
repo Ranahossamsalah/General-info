@@ -1,3 +1,67 @@
-.title{
-    
+/* * @format */
+/* ///////////////////////////////////////            general           /////////////////////////////////////////////// */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+button {
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: rgba(170, 74, 10, 0.525);
+  color: white;
+  transition: all 0.2s;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: rgb(170, 74, 10);
+}
+.bg {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  background-image: url("./bg.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+#logo {
+  width: 200px;
+}
+#quiz {
+  font-size: 40px;
+  font-weight: 800;
+  color: rgba(68, 40, 23, 0.887);
+}
+#quiz .count {
+  display: flex;
+}
+#quiz #questionBox,
+#settings {
+  background-color: rgba(175, 175, 175, 0.171);
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 500;
+  color: rgb(197, 197, 197);
+}
+#settings #category,
+#settings #difficulty,
+#settings #Questions,
+#settings #Questions #startBtn {
+  display: flex;
+  justify-content: space-around;
+}
+#settings #Questions{
+
 }

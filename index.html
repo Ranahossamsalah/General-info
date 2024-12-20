@@ -6,72 +6,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="title">Quiz app</title>
+    <title class="title"> General info</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div id="final" style="display: none">
-        <h3>you have answered all questions</h3>
-        <p id="score"></p>
-        <h4>try again</h4>
-        <button id="againBtn">Again</button>
-      </div>
-      <div id="quiz">
-        quiz
-        <div class="count">
-          <p id="current">0</p>
-          <p>/</p>
-          <p id="total"></p>
+    <div class="bg">
+      <div class="container">
+        <img id="logo" src="./logo.png" >
+        <div id="final" style="display: none">
+          <h3>you have answered all questions</h3>
+          <p id="score"></p>
+          <h4>try again</h4>
+          <button id="againBtn">Again</button>
         </div>
-        <h3 id="question"></h3>
-        <label id="a1"> </label>
-        <label id="a2"> </label>
-        <label id="a3"> </label>
-        <label id="a4"> </label>
+        <div id="quiz">
+           General info Quiz
+          <div class="count">
+            <p id="current">0</p>
+            <p>/</p>
+            <p id="total"></p>
+          </div>
+          <div id="questionBox" >
+          <h3 id="question"></h3>
+          <label id="a1"> </label>
+          <label id="a2"> </label>
+          <label id="a3"> </label>
+          <label id="a4"> </label></div>
 
-        <button id="nextBtn">next</button>
-      </div>
-      <div id="settings">
-        <div id="">
-          <label for="category">select category</label>
-          <select name="" id="category">
-            <option value="25">Art</option>
-            <option value="27">Animals</option>
-            <option value="23">History</option>
-            <option value="21">sports</option>
-            <option value="24">politics</option>
-            <option value="22">geography</option>
-            <option value="26">celeberities</option>
-            <option value="28">vehicles</option>
-            <option value="20">mythology</option>
-            <option value="9">general knowledge</option>
-            <option value="11">Entertainment: film</option>
-            <option value="14">Entertainment: television</option>
-            <option value="10">Entertainment: books</option>
-          </select>
+          <button id="nextBtn">Next</button>
         </div>
-        <div id="">
-          <label for="difficulty"> difficulty</label>
-          <input type="radio" id="hard" name="chooseDifficulty" value="hard" />
-          <label for="hard"> hard</label>
-          <input
-            type="radio"
-            id="medium"
-            name="chooseDifficulty"
-            value="medium"
-          />
-          <label for="medium"> medium</label>
-          <input type="radio" id="easy" name="chooseDifficulty" value="easy" />
-          <label for="easy"> easy</label>
-        </div>
+        <div id="settings">
+          <div id="category">
+            <label for="category">Select Category</label>
+            <select name="" id="category">
+              <option value="25">Art</option>
+              <option value="27">Animals</option>
+              <option value="23">History</option>
+              <option value="21">sports</option>
+              <option value="24">politics</option>
+              <option value="22">geography</option>
+              <option value="26">celeberities</option>
+              <option value="28">vehicles</option>
+              <option value="20">mythology</option>
+              <option value="9">general knowledge</option>
+              <option value="11">Entertainment: film</option>
+              <option value="14">Entertainment: television</option>
+              <option value="10">Entertainment: books</option>
+            </select>
+          </div>
+          <div id="difficulty">
+            <label for="difficulty"> Difficulty</label>
+            <div>
+            <input
+              type="radio"
+              id="hard"
+              name="chooseDifficulty"
+              value="hard"
+            />
+            <label for="hard"> hard</label>
+            <input
+              type="radio"
+              id="medium"
+              name="chooseDifficulty"
+              value="medium"
+            />
+            <label for="medium"> medium</label>
+            <input
+              type="radio"
+              id="easy"
+              name="chooseDifficulty"
+              value="easy"
+            />
+            <label for="easy"> easy</label>
+          </div></div>
 
-        <div>
-          <label for="nQuestions">Number of questions</label>
-          <input type="number" id="nQuestions" />
+          <div id="Questions" >
+            <label for="nQuestions">Number of questions</label>
+            <input type="number" id="nQuestions" />
+          </div>
+          <button id="startBtn">Start</button>
         </div>
-        <button id="startBtn">start</button>
       </div>
     </div>
     <script type="module" src="main.js"></script>
