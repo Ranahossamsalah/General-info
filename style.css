@@ -1,11 +1,13 @@
 /* * @format */
-/* ///////////////////////////////////////            general           /////////////////////////////////////////////// */
+
+/*============================================================ -general =============================================================*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 :root {
+  --primaryColor: rgb(170, 74, 10);
 }
 
 .container {
@@ -14,12 +16,14 @@
 }
 button {
   width: 200px;
-  height: 25px;
+  height: 35px;
   border-radius: 5px;
   background-color: rgba(170, 74, 10, 0.525);
   color: white;
   transition: all 0.2s;
   font-weight: 700;
+  border: 1px solid rgba(0, 0, 0, 0.313);
+  font-size: 18px;
 }
 
 button:hover {
@@ -35,11 +39,51 @@ button:hover {
   width: 100vw;
   height: 100vh;
 }
+.loader {
+  border: 12px solid #4f4f4f; /* Light grey */
+  border-top: 12px solid var(--primaryColor); /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hide-loader {
+  display: none;
+}
+
 #logo {
   width: 200px;
 }
+
+/*============================================================ -score =============================================================*/
+#title2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+#score {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(0, 0, 0);
+  background-color: rgba(175, 175, 175, 0.381);
+  text-align: center;
+  border-radius: 5px;
+  margin: 10px 0px;
+}
+
+/*============================================================ -quiz =============================================================*/
 #quiz {
   font-size: 40px;
+  display: none;
   font-weight: 800;
   color: rgba(68, 40, 23, 0.887);
 }
@@ -50,18 +94,65 @@ button:hover {
 #settings {
   background-color: rgba(175, 175, 175, 0.171);
   border-radius: 20px;
-  padding: 20px;
+  padding: 20px 170px;
   font-size: 22px;
   font-weight: 500;
-  color: rgb(197, 197, 197);
+  color: rgb(255, 255, 255);
+  line-height: 40px;
 }
-#settings #category,
+#quiz #question{
+font-weight: 300px;
+}
+label{
+  font-size: 20px;
+  font-weight: 100px;
+  }
+/*============================================================ -settings =============================================================*/
+#settings #categoryBox,
 #settings #difficulty,
 #settings #Questions,
 #settings #Questions #startBtn {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 10px;
 }
-#settings #Questions{
+#settings #categoryBox {
+  background-color: rgba(8, 8, 8, 0.208);
+}
+#settings #difficulty {
+  background-color: rgba(37, 37, 37, 0.24);
+}
+#settings #Questions {
+  background-color: rgba(25, 25, 25, 0.342);
+}
+#settings #categoryBox:hover,
+#settings #difficulty:hover,
+#settings #Questions:hover {
+  background-color: rgba(87, 87, 87, 0.617);
+  border-radius: 10px;
+}
+#settings #category select {
+  background-color: rgba(111, 111, 111, 0.466);
+  color: rgb(255, 255, 255);
+}
+#settings #category select option {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
 
+/*============================================================ -responsive =============================================================*/
+@media screen and (max-width: 1200px) {
+  #quiz #questionBox, #settings{
+    padding: 20px 50px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .container {
+    width: 90%;
+  }
+  #quiz #questionBox, #settings{
+    padding: 20px 10px;
+  }
+}
+@media screen and (max-width: 400px) {
 }

@@ -34,7 +34,7 @@ class Settings {
           return data.results;
         });
 
-      console.log(result);
+      console.log(result, amount ,this.category.value, difficulty);
 
       if (result) {
         this.quiz = new Quiz(this.quizDom, amount, result);

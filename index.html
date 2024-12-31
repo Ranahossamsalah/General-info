@@ -6,38 +6,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="title"> General info</title>
+    <title class="title">General info</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="bg">
       <div class="container">
-        <img id="logo" src="./logo.png" >
+        <img id="logo" src="./logo.png" />
         <div id="final" style="display: none">
-          <h3>you have answered all questions</h3>
+          
+          <h3 id="title2">you have answered all questions</h3>
+          <div id="loader" class="loader" ></div>
           <p id="score"></p>
-          <h4>try again</h4>
           <button id="againBtn">Again</button>
         </div>
-        <div id="quiz">
-           General info Quiz
+        <div id="quiz" >
+          General info Quiz
           <div class="count">
             <p id="current">0</p>
             <p>/</p>
             <p id="total"></p>
           </div>
-          <div id="questionBox" >
-          <h3 id="question"></h3>
-          <label id="a1"> </label>
-          <label id="a2"> </label>
-          <label id="a3"> </label>
-          <label id="a4"> </label></div>
+          <div id="questionBox">
+            <h3 id="question"></h3>
+            <label id="a1"> </label>
+            <label id="a2"> </label>
+            <label id="a3"> </label>
+            <label id="a4"> </label>
+          </div>
 
           <button id="nextBtn">Next</button>
         </div>
         <div id="settings">
-          <div id="category">
+          <div id="categoryBox">
             <label for="category">Select Category</label>
             <select name="" id="category">
               <option value="25">Art</option>
@@ -58,30 +60,31 @@
           <div id="difficulty">
             <label for="difficulty"> Difficulty</label>
             <div>
-            <input
-              type="radio"
-              id="hard"
-              name="chooseDifficulty"
-              value="hard"
-            />
-            <label for="hard"> hard</label>
-            <input
-              type="radio"
-              id="medium"
-              name="chooseDifficulty"
-              value="medium"
-            />
-            <label for="medium"> medium</label>
-            <input
-              type="radio"
-              id="easy"
-              name="chooseDifficulty"
-              value="easy"
-            />
-            <label for="easy"> easy</label>
-          </div></div>
+              <input
+                type="radio"
+                id="hard"
+                name="chooseDifficulty"
+                value="hard"
+              />
+              <label for="hard"> hard</label>
+              <input
+                type="radio"
+                id="medium"
+                name="chooseDifficulty"
+                value="medium"
+              />
+              <label for="medium"> medium</label>
+              <input
+                type="radio"
+                id="easy"
+                name="chooseDifficulty"
+                value="easy"
+              />
+              <label for="easy"> easy</label>
+            </div>
+          </div>
 
-          <div id="Questions" >
+          <div id="Questions">
             <label for="nQuestions">Number of questions</label>
             <input type="number" id="nQuestions" />
           </div>

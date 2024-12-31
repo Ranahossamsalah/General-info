@@ -12,7 +12,7 @@ class Question {
       document.getElementById("a4"),
     ];
     // api data
-    console.log(question);
+    console.log(question, question.correct_answer);
     this.question = question.question;
     console.log(this.question);
     this.correctAnswer = question.correct_answer;
@@ -22,9 +22,9 @@ class Question {
   //check if the answer is true or false
   answer(checkedElement) {
    
-      checkedElement[0].textContent === this.correctAnswer ?  this.isCorrect =true : this.isCorrect =false;
+      checkedElement[0].textContent.trim() === this.correctAnswer ?  this.isCorrect =true : this.isCorrect =false;
       console.log('====================================');
-      console.log(this.isCorrect);
+      console.log(this.isCorrect ,checkedElement[0].textContent,this.correctAnswer);
       console.log('====================================');
   }
   //put all data in the question page
