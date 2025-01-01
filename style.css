@@ -25,7 +25,11 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.313);
   font-size: 18px;
 }
-
+select, #nQuestions {
+  width: auto;
+  min-width:160px;
+  max-width: 100px;
+}
 button:hover {
   background-color: rgb(170, 74, 10);
 }
@@ -131,10 +135,7 @@ label{
   background-color: rgba(87, 87, 87, 0.617);
   border-radius: 10px;
 }
-#settings #category select {
-  background-color: rgba(111, 111, 111, 0.466);
-  color: rgb(255, 255, 255);
-}
+
 #settings #category select option {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -150,9 +151,23 @@ label{
   .container {
     width: 90%;
   }
+  select, #nQuestions  {
+    min-width:120px;
+  }
   #quiz #questionBox, #settings{
     padding: 20px 10px;
   }
+
 }
 @media screen and (max-width: 400px) {
+  select,  #nQuestions  {
+    min-width:50px;
+  }
+  #settings , label{
+    font-size:18px ;
+  }
+  #settings #difficulty{
+    display: block;
+  }
+
 }
